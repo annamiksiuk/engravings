@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="News 705 Italic BT.ttf">
+            <string>News705BT-ItalicB</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppPurchaseView" customModule="engravings" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="TFm-jy-xiZ"/>
+                <outlet property="insideView" destination="ChM-aj-qzD" id="5We-di-6K7"/>
+                <outlet property="outsideView" destination="tR8-iM-sB2" id="aFH-kr-Bjy"/>
+                <outlet property="restoreButton" destination="4cA-KW-TCk" id="L8t-g3-nOa"/>
+                <outlet property="unlockButton" destination="Yl4-4i-GB4" id="lOY-i9-7lM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tR8-iM-sB2">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ChM-aj-qzD">
+                    <rect key="frame" x="30" y="170.5" width="315" height="325"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This topic is  locked!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="9Kr-rf-ezi">
+                            <rect key="frame" x="40" y="15" width="235" height="75"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="75" id="NDY-vV-bm0"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="News705BT-ItalicB" family="News705 BT" pointSize="30"/>
+                            <color key="textColor" red="0.56470588235294117" green="0.074509803921568626" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlock the full version for 2.49$ and open other topics" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="2qk-V6-nXT">
+                            <rect key="frame" x="20" y="90" width="275" height="130"/>
+                            <fontDescription key="fontDescription" name="News705BT-ItalicB" family="News705 BT" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cA-KW-TCk">
+                            <rect key="frame" x="10" y="285" width="295" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="azq-ug-baO"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="News705BT-ItalicB" family="News705 BT" pointSize="16"/>
+                            <state key="normal" title="Restore">
+                                <color key="titleColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="actionRestore:" destination="-1" eventType="touchUpInside" id="5SS-Ua-Uhx"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yl4-4i-GB4">
+                            <rect key="frame" x="15" y="230" width="285" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Mp3-WT-qGj"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="News705BT-ItalicB" family="News705 BT" pointSize="25"/>
+                            <state key="normal" title="Unlock full version">
+                                <color key="titleColor" red="0.56470588235294117" green="0.074509803921568626" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="actionUnlock:" destination="-1" eventType="touchUpInside" id="aRw-zV-H1w"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="2qk-V6-nXT" secondAttribute="trailing" constant="20" id="0fR-fd-jbs"/>
+                        <constraint firstItem="Yl4-4i-GB4" firstAttribute="leading" secondItem="ChM-aj-qzD" secondAttribute="leading" constant="15" id="1z8-VQ-ovv"/>
+                        <constraint firstAttribute="trailing" secondItem="4cA-KW-TCk" secondAttribute="trailing" constant="10" id="4dk-YH-2AN"/>
+                        <constraint firstItem="Yl4-4i-GB4" firstAttribute="top" secondItem="2qk-V6-nXT" secondAttribute="bottom" constant="10" id="7SH-XZ-p9a"/>
+                        <constraint firstItem="2qk-V6-nXT" firstAttribute="top" secondItem="9Kr-rf-ezi" secondAttribute="bottom" id="8dB-Dg-fiG"/>
+                        <constraint firstAttribute="trailing" secondItem="9Kr-rf-ezi" secondAttribute="trailing" constant="40" id="J7l-AV-gee"/>
+                        <constraint firstItem="2qk-V6-nXT" firstAttribute="leading" secondItem="ChM-aj-qzD" secondAttribute="leading" constant="20" id="KNn-cy-hFs"/>
+                        <constraint firstAttribute="height" constant="325" id="LVH-cs-6Cy"/>
+                        <constraint firstItem="4cA-KW-TCk" firstAttribute="top" secondItem="Yl4-4i-GB4" secondAttribute="bottom" constant="5" id="SJd-Xq-QSs"/>
+                        <constraint firstItem="4cA-KW-TCk" firstAttribute="leading" secondItem="ChM-aj-qzD" secondAttribute="leading" constant="10" id="Sa8-Ac-kyX"/>
+                        <constraint firstAttribute="trailing" secondItem="Yl4-4i-GB4" secondAttribute="trailing" constant="15" id="hVj-Il-7Kb"/>
+                        <constraint firstItem="9Kr-rf-ezi" firstAttribute="leading" secondItem="ChM-aj-qzD" secondAttribute="leading" constant="40" id="pF1-H6-8Rr"/>
+                        <constraint firstAttribute="bottom" secondItem="4cA-KW-TCk" secondAttribute="bottom" constant="5" id="s12-0s-CPy"/>
+                        <constraint firstItem="9Kr-rf-ezi" firstAttribute="top" secondItem="ChM-aj-qzD" secondAttribute="top" constant="15" id="vaD-hZ-rAH"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="tR8-iM-sB2" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="0HV-Av-bAw"/>
+                <constraint firstItem="ChM-aj-qzD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="1w8-rH-Tqy"/>
+                <constraint firstItem="tR8-iM-sB2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3Ad-PU-lzn"/>
+                <constraint firstItem="tR8-iM-sB2" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="F2c-TX-KP2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ChM-aj-qzD" secondAttribute="trailing" constant="30" id="Ojx-W2-8fC"/>
+                <constraint firstItem="ChM-aj-qzD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="c5H-CY-k9D"/>
+                <constraint firstItem="tR8-iM-sB2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fut-46-snS"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+</document>

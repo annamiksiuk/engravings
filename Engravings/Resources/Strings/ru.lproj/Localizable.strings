@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  Engravings
+
+  Created by Anna Miksiuk on 27.07.2018.
+  Copyright © 2018 Anna Miksiuk. All rights reserved.
+*/
+
+"draw" = "Рисовать";
+"back" = "Назад";
+
+"Flowers" = "Цветы";
+"Butterflies" = "Бабочки";
+"Cars" = "Машины";
+"Berries" = "Ягоды";
+"Animals" = "Животные";
+"Nature" = "Природа";
+"Birds" = "Птицы";
+"Fruits" = "Фрукты";
+"Vegetables" = "Овощи";
+"Clothes" = "Одежда";

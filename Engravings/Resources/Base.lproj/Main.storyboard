@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ktp-JV-jIg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Controller-->
+        <scene sceneID="3cZ-8v-u7A">
+            <objects>
+                <viewController id="Ktp-JV-jIg" customClass="MainController" customModule="Engravings" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oh6-pD-gqh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="OP4-As-dzS">
+                                <rect key="frame" x="0.0" y="70" width="375" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="Xem-h6-hbG"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="u47-EG-e6d">
+                                <rect key="frame" x="0.0" y="612" width="375" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="8E9-H9-bf5"/>
+                                </constraints>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="8" translatesAutoresizingMaskIntoConstraints="NO" id="iyD-VN-931" customClass="PageControl" customModule="Engravings" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="630" width="375" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="Mne-uG-ldA"/>
+                                </constraints>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIf-0h-ttC">
+                                <rect key="frame" x="310" y="10" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Jep-fm-RYn"/>
+                                    <constraint firstAttribute="height" constant="50" id="pR3-0j-Vjw"/>
+                                </constraints>
+                                <state key="normal" image="draw"/>
+                                <connections>
+                                    <action selector="actionDraw:" destination="Ktp-JV-jIg" eventType="touchUpInside" id="cRX-70-NX4"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEe-ZT-XQu">
+                                <rect key="frame" x="15" y="10" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GDv-DE-Tpp"/>
+                                    <constraint firstAttribute="width" constant="50" id="ay4-Md-DKj"/>
+                                </constraints>
+                                <state key="normal" image="lock"/>
+                                <connections>
+                                    <action selector="actionLock:" destination="Ktp-JV-jIg" eventType="touchUpInside" id="5sm-Zq-We7"/>
+                                </connections>
+                            </button>
+                            <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Animals" translatesAutoresizingMaskIntoConstraints="NO" id="NVc-2O-bWo">
+                                <rect key="frame" x="0.0" y="80" width="375" height="532"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finger" translatesAutoresizingMaskIntoConstraints="NO" id="rjK-2b-dRU">
+                                <rect key="frame" x="300" y="150" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="5N5-XE-cEV"/>
+                                    <constraint firstAttribute="height" constant="50" id="Jrv-78-Rcg"/>
+                                </constraints>
+                            </imageView>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fb-Zu-goG" customClass="AppPurchaseView" customModule="Engravings" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pEe-ZT-XQu" firstAttribute="top" secondItem="Oh6-pD-gqh" secondAttribute="top" constant="10" id="4fK-8z-iWI"/>
+                            <constraint firstItem="VVu-N1-5aZ" firstAttribute="trailing" secondItem="iyD-VN-931" secondAttribute="trailing" id="AaA-pZ-KqY"/>
+                            <constraint firstItem="OP4-As-dzS" firstAttribute="leading" secondItem="VVu-N1-5aZ" secondAttribute="leading" id="CD6-0U-9II"/>
+                            <constraint firstItem="u47-EG-e6d" firstAttribute="top" secondItem="NVc-2O-bWo" secondAttribute="bottom" id="DTG-bk-q8j"/>
+                            <constraint firstItem="VVu-N1-5aZ" firstAttribute="trailing" secondItem="NVc-2O-bWo" secondAttribute="trailing" id="JRn-Yn-44q"/>
+                            <constraint firstItem="OP4-As-dzS" firstAttribute="top" secondItem="NIf-0h-ttC" secondAttribute="bottom" constant="10" id="PRn-0F-vys"/>
+                            <constraint firstItem="iyD-VN-931" firstAttribute="leading" secondItem="Oh6-pD-gqh" secondAttribute="leading" id="QyG-DR-Bgf"/>
+                            <constraint firstItem="OP4-As-dzS" firstAttribute="trailing" secondItem="VVu-N1-5aZ" secondAttribute="trailing" id="Roc-Gf-ox5"/>
+                            <constraint firstItem="8fb-Zu-goG" firstAttribute="leading" secondItem="VVu-N1-5aZ" secondAttribute="leading" id="V7M-8f-CXi"/>
+                            <constraint firstItem="rjK-2b-dRU" firstAttribute="top" secondItem="OP4-As-dzS" secondAttribute="bottom" constant="70" id="VvH-lL-Hlm"/>
+                            <constraint firstItem="u47-EG-e6d" firstAttribute="leading" secondItem="VVu-N1-5aZ" secondAttribute="leading" id="WR4-AU-CXf"/>
+                            <constraint firstItem="VVu-N1-5aZ" firstAttribute="trailing" secondItem="NIf-0h-ttC" secondAttribute="trailing" constant="15" id="ZiJ-92-ElJ"/>
+                            <constraint firstItem="8fb-Zu-goG" firstAttribute="top" secondItem="Oh6-pD-gqh" secondAttribute="top" id="ZxU-oj-Hxn"/>
+                            <constraint firstItem="NIf-0h-ttC" firstAttribute="top" secondItem="Oh6-pD-gqh" secondAttribute="top" constant="10" id="a8L-SH-oBR"/>
+                            <constraint firstItem="NVc-2O-bWo" firstAttribute="top" secondItem="OP4-As-dzS" secondAttribute="bottom" id="djB-4O-US3"/>
+                            <constraint firstItem="8fb-Zu-goG" firstAttribute="trailing" secondItem="VVu-N1-5aZ" secondAttribute="trailing" id="fNM-r2-wIm"/>
+                            <constraint firstItem="iyD-VN-931" firstAttribute="top" secondItem="u47-EG-e6d" secondAttribute="bottom" constant="8" id="guD-a3-91A"/>
+                            <constraint firstItem="u47-EG-e6d" firstAttribute="trailing" secondItem="VVu-N1-5aZ" secondAttribute="trailing" id="htn-LM-IP1"/>
+                            <constraint firstItem="VVu-N1-5aZ" firstAttribute="bottom" secondItem="iyD-VN-931" secondAttribute="bottom" id="iCX-Db-CGr"/>
+                            <constraint firstItem="VVu-N1-5aZ" firstAttribute="trailing" secondItem="rjK-2b-dRU" secondAttribute="trailing" constant="25" id="qa9-Aw-ztM"/>
+                            <constraint firstItem="pEe-ZT-XQu" firstAttribute="leading" secondItem="VVu-N1-5aZ" secondAttribute="leading" constant="15" id="rqK-P9-M3h"/>
+                            <constraint firstItem="8fb-Zu-goG" firstAttribute="bottom" secondItem="VVu-N1-5aZ" secondAttribute="bottom" id="sH9-YS-ZRc"/>
+                            <constraint firstItem="NVc-2O-bWo" firstAttribute="leading" secondItem="VVu-N1-5aZ" secondAttribute="leading" id="tGS-3s-aPk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VVu-N1-5aZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HrM-zQ-erY"/>
+                    <connections>
+                        <outlet property="appPurchaseView" destination="8fb-Zu-goG" id="KMa-Ao-Ibi"/>
+                        <outlet property="drawButton" destination="NIf-0h-ttC" id="OQe-xD-6t2"/>
+                        <outlet property="fingerImageView" destination="rjK-2b-dRU" id="jw3-3t-SYu"/>
+                        <outlet property="lockButton" destination="pEe-ZT-XQu" id="Xzn-gM-Uqe"/>
+                        <outlet property="pageControl" destination="iyD-VN-931" id="wtK-Oj-rQf"/>
+                        <outlet property="topicImageView" destination="NVc-2O-bWo" id="n4F-N3-fVc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pOv-Ut-Zpa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-938.39999999999998" y="17.541229385307346"/>
+        </scene>
+        <!--Topic Controller-->
+        <scene sceneID="adN-Ef-ZYr">
+            <objects>
+                <viewController storyboardIdentifier="TopicControllerID" id="heb-vi-ZUg" customClass="TopicController" customModule="Engravings" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9bW-qU-8g3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="Yhz-di-nlO">
+                                <rect key="frame" x="0.0" y="70" width="375" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="3dj-eX-Aad"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="YAB-lC-5YJ">
+                                <rect key="frame" x="0.0" y="612" width="375" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="hk5-Ls-xLl"/>
+                                </constraints>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="14" translatesAutoresizingMaskIntoConstraints="NO" id="sOX-CQ-di0" customClass="PageControl" customModule="Engravings" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="630" width="375" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="sw3-Bt-2wm"/>
+                                </constraints>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLP-DC-5KY">
+                                <rect key="frame" x="310" y="10" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Ioq-H1-CgS"/>
+                                    <constraint firstAttribute="height" constant="50" id="QgA-GP-inL"/>
+                                </constraints>
+                                <state key="normal" image="draw"/>
+                                <connections>
+                                    <action selector="actionDraw:" destination="heb-vi-ZUg" eventType="touchUpInside" id="luS-Wr-bQj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwr-A4-PPJ">
+                                <rect key="frame" x="15" y="10" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sPO-wG-rgy"/>
+                                    <constraint firstAttribute="width" constant="50" id="wJv-ky-Faq"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="actionBack:" destination="heb-vi-ZUg" eventType="touchUpInside" id="WZD-Bi-Eon"/>
+                                </connections>
+                            </button>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Egc-1l-i2A">
+                                <rect key="frame" x="0.0" y="80" width="375" height="532"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rJt-ln-4aC" firstAttribute="trailing" secondItem="Egc-1l-i2A" secondAttribute="trailing" id="5BJ-g9-2Qp"/>
+                            <constraint firstItem="Yhz-di-nlO" firstAttribute="leading" secondItem="rJt-ln-4aC" secondAttribute="leading" id="CBj-0q-Bqo"/>
+                            <constraint firstItem="Yhz-di-nlO" firstAttribute="trailing" secondItem="rJt-ln-4aC" secondAttribute="trailing" id="IO5-k9-fK8"/>
+                            <constraint firstItem="YAB-lC-5YJ" firstAttribute="trailing" secondItem="rJt-ln-4aC" secondAttribute="trailing" id="OHq-9M-cVu"/>
+                            <constraint firstItem="sOX-CQ-di0" firstAttribute="leading" secondItem="rJt-ln-4aC" secondAttribute="leading" id="Q2h-hY-HUo"/>
+                            <constraint firstItem="Wwr-A4-PPJ" firstAttribute="leading" secondItem="rJt-ln-4aC" secondAttribute="leading" constant="15" id="ReL-OY-Vay"/>
+                            <constraint firstItem="rJt-ln-4aC" firstAttribute="trailing" secondItem="nLP-DC-5KY" secondAttribute="trailing" constant="15" id="UOW-5Y-d4q"/>
+                            <constraint firstItem="nLP-DC-5KY" firstAttribute="top" secondItem="9bW-qU-8g3" secondAttribute="top" constant="10" id="XFA-mp-ugP"/>
+                            <constraint firstItem="YAB-lC-5YJ" firstAttribute="top" secondItem="Egc-1l-i2A" secondAttribute="bottom" id="XLt-7s-yUN"/>
+                            <constraint firstItem="sOX-CQ-di0" firstAttribute="top" secondItem="YAB-lC-5YJ" secondAttribute="bottom" constant="8" id="Zyf-MI-cao"/>
+                            <constraint firstItem="YAB-lC-5YJ" firstAttribute="leading" secondItem="rJt-ln-4aC" secondAttribute="leading" id="dv0-On-hQf"/>
+                            <constraint firstItem="Egc-1l-i2A" firstAttribute="leading" secondItem="rJt-ln-4aC" secondAttribute="leading" id="eWV-RR-AHa"/>
+                            <constraint firstItem="rJt-ln-4aC" firstAttribute="bottom" secondItem="sOX-CQ-di0" secondAttribute="bottom" id="eiK-NW-Sti"/>
+                            <constraint firstItem="Egc-1l-i2A" firstAttribute="top" secondItem="Yhz-di-nlO" secondAttribute="bottom" id="hzE-vj-bIZ"/>
+                            <constraint firstItem="sOX-CQ-di0" firstAttribute="trailing" secondItem="rJt-ln-4aC" secondAttribute="trailing" id="vQt-FY-7Ul"/>
+                            <constraint firstItem="Yhz-di-nlO" firstAttribute="top" secondItem="nLP-DC-5KY" secondAttribute="bottom" constant="10" id="wUp-ps-pzb"/>
+                            <constraint firstItem="Wwr-A4-PPJ" firstAttribute="top" secondItem="9bW-qU-8g3" secondAttribute="top" constant="10" id="zvT-ps-JVi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rJt-ln-4aC"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RRc-lF-kgw"/>
+                    <connections>
+                        <outlet property="pageControl" destination="sOX-CQ-di0" id="N8o-cg-Q3l"/>
+                        <outlet property="pictureImageView" destination="Egc-1l-i2A" id="Nj2-Fw-AbO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uaH-sg-kQC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-186.40000000000001" y="17.541229385307346"/>
+        </scene>
+        <!--Scrape Picture Controller-->
+        <scene sceneID="lSB-xj-HSg">
+            <objects>
+                <viewController storyboardIdentifier="ScrapePictureControllerID" id="XN7-c0-TzU" customClass="ScrapePictureController" customModule="Engravings" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cvB-My-R9J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="dPF-eQ-3dn">
+                                <rect key="frame" x="0.0" y="70" width="375" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="5ao-F5-vSl"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDR-d2-tur">
+                                <rect key="frame" x="15" y="10" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="WHa-zz-RXh"/>
+                                    <constraint firstAttribute="height" constant="50" id="d2g-lC-fO1"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="actionBack:" destination="XN7-c0-TzU" eventType="touchUpInside" id="xNB-t8-ks1"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NED-P9-P0G">
+                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wt3-CO-xM7" customClass="EngravingView" customModule="Engravings" customModuleProvider="target">
+                                <rect key="frame" x="-0.5" y="80" width="375" height="587"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finger" translatesAutoresizingMaskIntoConstraints="NO" id="XXh-fZ-9Zr">
+                                <rect key="frame" x="162" y="308" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="TPa-58-2Go"/>
+                                    <constraint firstAttribute="width" constant="50" id="kUr-nr-orM"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="engravings" translatesAutoresizingMaskIntoConstraints="NO" id="1Bf-qH-pY8">
+                                <rect key="frame" x="160" y="15" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="CFy-tX-gdb"/>
+                                    <constraint firstAttribute="height" constant="40" id="VUo-Pq-fxJ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wt3-CO-xM7" firstAttribute="centerY" secondItem="NED-P9-P0G" secondAttribute="centerY" id="0aP-MZ-9eL"/>
+                            <constraint firstItem="Wt3-CO-xM7" firstAttribute="height" secondItem="NED-P9-P0G" secondAttribute="height" id="4ZQ-LT-LbO"/>
+                            <constraint firstItem="NED-P9-P0G" firstAttribute="leading" secondItem="Lji-0h-PoA" secondAttribute="leading" id="8Hh-w3-dVL"/>
+                            <constraint firstItem="PDR-d2-tur" firstAttribute="top" secondItem="cvB-My-R9J" secondAttribute="top" constant="10" id="8Jk-d0-xVj"/>
+                            <constraint firstItem="dPF-eQ-3dn" firstAttribute="trailing" secondItem="Lji-0h-PoA" secondAttribute="trailing" id="8Ud-l2-itw"/>
+                            <constraint firstItem="Wt3-CO-xM7" firstAttribute="width" secondItem="NED-P9-P0G" secondAttribute="width" id="9wG-aO-yuS"/>
+                            <constraint firstItem="XXh-fZ-9Zr" firstAttribute="centerX" secondItem="cvB-My-R9J" secondAttribute="centerX" id="GMr-tF-0Vm"/>
+                            <constraint firstItem="dPF-eQ-3dn" firstAttribute="leading" secondItem="Lji-0h-PoA" secondAttribute="leading" id="H69-kB-KUS"/>
+                            <constraint firstItem="PDR-d2-tur" firstAttribute="leading" secondItem="Lji-0h-PoA" secondAttribute="leading" constant="15" id="Ioj-0E-O1y"/>
+                            <constraint firstItem="1Bf-qH-pY8" firstAttribute="top" secondItem="cvB-My-R9J" secondAttribute="top" constant="15" id="PWx-Ih-i0d"/>
+                            <constraint firstItem="NED-P9-P0G" firstAttribute="top" secondItem="dPF-eQ-3dn" secondAttribute="bottom" id="RVo-Y6-ZxT"/>
+                            <constraint firstItem="Wt3-CO-xM7" firstAttribute="centerX" secondItem="NED-P9-P0G" secondAttribute="centerX" id="S5h-Hd-63L"/>
+                            <constraint firstItem="NED-P9-P0G" firstAttribute="top" secondItem="dPF-eQ-3dn" secondAttribute="bottom" id="SwR-s9-ZkC"/>
+                            <constraint firstItem="Lji-0h-PoA" firstAttribute="trailing" secondItem="1Bf-qH-pY8" secondAttribute="trailing" constant="15" id="dlN-fb-DRB"/>
+                            <constraint firstItem="Lji-0h-PoA" firstAttribute="trailing" secondItem="NED-P9-P0G" secondAttribute="trailing" id="ebg-cN-6fU"/>
+                            <constraint firstItem="Lji-0h-PoA" firstAttribute="bottom" secondItem="NED-P9-P0G" secondAttribute="bottom" id="lS5-gX-RFg"/>
+                            <constraint firstItem="dPF-eQ-3dn" firstAttribute="top" secondItem="PDR-d2-tur" secondAttribute="bottom" constant="10" id="r66-WM-4JU"/>
+                            <constraint firstItem="XXh-fZ-9Zr" firstAttribute="centerY" secondItem="cvB-My-R9J" secondAttribute="centerY" id="yz5-el-oWv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lji-0h-PoA"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cbG-Hg-Mr8"/>
+                    <connections>
+                        <outlet property="backgroundImage" destination="NED-P9-P0G" id="5A6-i6-qXR"/>
+                        <outlet property="engravingView" destination="Wt3-CO-xM7" id="24r-QO-wIo"/>
+                        <outlet property="fingerImageView" destination="XXh-fZ-9Zr" id="ZF5-Kl-F9j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Vs-7X-RXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="548" y="18"/>
+        </scene>
+        <!--Scrape Controller-->
+        <scene sceneID="oqb-Lx-GsW">
+            <objects>
+                <viewController storyboardIdentifier="ScrapeControllerID" id="9ZR-da-W2l" customClass="ScrapeController" customModule="Engravings" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hwh-oJ-tx9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="TGf-rT-tFl">
+                                <rect key="frame" x="0.0" y="70" width="375" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="lhZ-q6-l1F"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhQ-xh-TKB">
+                                <rect key="frame" x="15" y="10" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6AQ-gp-AZG"/>
+                                    <constraint firstAttribute="width" constant="50" id="ISx-Gr-OoV"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="actionBack:" destination="9ZR-da-W2l" eventType="touchUpInside" id="yxM-R5-7DB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iha-a8-zCM">
+                                <rect key="frame" x="310" y="10" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="IR7-9t-BWE"/>
+                                    <constraint firstAttribute="height" constant="50" id="TRK-4s-nGU"/>
+                                </constraints>
+                                <state key="normal" image="eraser"/>
+                                <connections>
+                                    <action selector="actionEraser:" destination="9ZR-da-W2l" eventType="touchUpInside" id="qkD-Wy-ubX"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PW8-Cz-stN">
+                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qVc-Qy-vMp" customClass="EngravingView" customModule="Engravings" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="79.5" width="375" height="587"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finger" translatesAutoresizingMaskIntoConstraints="NO" id="qOs-59-90r">
+                                <rect key="frame" x="162.5" y="308.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="TWr-9v-lNc"/>
+                                    <constraint firstAttribute="width" constant="50" id="dNs-GZ-0jX"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWg-wA-kIC">
+                                <rect key="frame" x="137" y="50" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="WSa-iX-SkQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="qEB-yK-kD8"/>
+                                </constraints>
+                                <state key="normal" image="photo"/>
+                                <connections>
+                                    <action selector="actionCamera:" destination="9ZR-da-W2l" eventType="touchUpInside" id="V6d-4W-BS0"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="engravings" translatesAutoresizingMaskIntoConstraints="NO" id="k8J-45-tMG">
+                                <rect key="frame" x="87" y="5" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="8R1-NX-RPU"/>
+                                    <constraint firstAttribute="height" constant="40" id="i3h-1u-9rg"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PW8-Cz-stN" firstAttribute="leading" secondItem="iIs-Qo-o6n" secondAttribute="leading" id="1rQ-2f-KOa"/>
+                            <constraint firstItem="TGf-rT-tFl" firstAttribute="top" secondItem="yhQ-xh-TKB" secondAttribute="bottom" constant="10" id="BMA-SW-SJa"/>
+                            <constraint firstItem="iIs-Qo-o6n" firstAttribute="bottom" secondItem="PW8-Cz-stN" secondAttribute="bottom" id="DlG-xn-WgN"/>
+                            <constraint firstItem="IWg-wA-kIC" firstAttribute="top" secondItem="Hwh-oJ-tx9" secondAttribute="top" constant="50" id="FPW-d4-WBw"/>
+                            <constraint firstItem="iIs-Qo-o6n" firstAttribute="trailing" secondItem="PW8-Cz-stN" secondAttribute="trailing" id="Hmu-hi-sqI"/>
+                            <constraint firstItem="qOs-59-90r" firstAttribute="centerY" secondItem="Hwh-oJ-tx9" secondAttribute="centerY" id="ICf-aS-N7w"/>
+                            <constraint firstItem="iIs-Qo-o6n" firstAttribute="trailing" secondItem="Iha-a8-zCM" secondAttribute="trailing" constant="15" id="OuG-k8-Wgd"/>
+                            <constraint firstItem="PW8-Cz-stN" firstAttribute="top" secondItem="TGf-rT-tFl" secondAttribute="bottom" id="Qwg-0P-35k"/>
+                            <constraint firstItem="TGf-rT-tFl" firstAttribute="leading" secondItem="iIs-Qo-o6n" secondAttribute="leading" id="Udf-ZI-cd3"/>
+                            <constraint firstItem="yhQ-xh-TKB" firstAttribute="leading" secondItem="iIs-Qo-o6n" secondAttribute="leading" constant="15" id="V1l-Im-7xT"/>
+                            <constraint firstItem="k8J-45-tMG" firstAttribute="top" secondItem="Hwh-oJ-tx9" secondAttribute="top" constant="5" id="WbK-uS-w8B"/>
+                            <constraint firstItem="TGf-rT-tFl" firstAttribute="trailing" secondItem="iIs-Qo-o6n" secondAttribute="trailing" id="eDU-Vf-Fg1"/>
+                            <constraint firstItem="qVc-Qy-vMp" firstAttribute="centerY" secondItem="PW8-Cz-stN" secondAttribute="centerY" id="eda-Mu-4Z3"/>
+                            <constraint firstItem="qVc-Qy-vMp" firstAttribute="centerX" secondItem="PW8-Cz-stN" secondAttribute="centerX" id="f68-n6-oG8"/>
+                            <constraint firstItem="k8J-45-tMG" firstAttribute="centerX" secondItem="Hwh-oJ-tx9" secondAttribute="centerX" id="h9Y-bO-vcN"/>
+                            <constraint firstItem="qVc-Qy-vMp" firstAttribute="height" secondItem="PW8-Cz-stN" secondAttribute="height" id="nSE-lt-KTe"/>
+                            <constraint firstItem="IWg-wA-kIC" firstAttribute="centerX" secondItem="Hwh-oJ-tx9" secondAttribute="centerX" id="o1h-mx-yGt"/>
+                            <constraint firstItem="qOs-59-90r" firstAttribute="centerX" secondItem="Hwh-oJ-tx9" secondAttribute="centerX" id="pA0-Cf-Jxg"/>
+                            <constraint firstItem="yhQ-xh-TKB" firstAttribute="top" secondItem="Hwh-oJ-tx9" secondAttribute="top" constant="10" id="pMw-N8-lnA"/>
+                            <constraint firstItem="qVc-Qy-vMp" firstAttribute="width" secondItem="PW8-Cz-stN" secondAttribute="width" id="qQ8-yg-wMa"/>
+                            <constraint firstItem="Iha-a8-zCM" firstAttribute="top" secondItem="Hwh-oJ-tx9" secondAttribute="top" constant="10" id="yt6-Mm-LUw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iIs-Qo-o6n"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hiq-Cp-kCH"/>
+                    <connections>
+                        <outlet property="backgroundImage" destination="PW8-Cz-stN" id="hh6-Zv-I41"/>
+                        <outlet property="engravingView" destination="qVc-Qy-vMp" id="0nM-WJ-inf"/>
+                        <outlet property="fingerImageView" destination="qOs-59-90r" id="7m8-FP-bJK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ckW-Vl-xbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-938.39999999999998" y="705.69715142428788"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Animals" width="220" height="380"/>
+        <image name="back" width="50" height="50"/>
+        <image name="draw" width="50" height="50"/>
+        <image name="engravings" width="232" height="55"/>
+        <image name="eraser" width="50" height="50"/>
+        <image name="finger" width="187" height="202"/>
+        <image name="line" width="284" height="10"/>
+        <image name="lock" width="50" height="50"/>
+        <image name="photo" width="100" height="50"/>
+    </resources>
+</document>
